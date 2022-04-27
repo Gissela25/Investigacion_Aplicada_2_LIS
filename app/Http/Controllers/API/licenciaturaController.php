@@ -44,7 +44,6 @@ class licenciaturaController extends Controller
     public function show(licenciatura $licenciatura)
     {
         return response()->json([
-            'res' => true,
             'licenciatura' => $licenciatura
         ],200);
     }
