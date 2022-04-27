@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateTableProfesorados extends Migration
+class CreateLicenciaturasTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,7 +13,7 @@ class CreateTableProfesorados extends Migration
      */
     public function up()
     {
-        Schema::create('table_profesorados', function (Blueprint $table) {
+        Schema::create('licenciaturas', function (Blueprint $table) {
             $table->id();
             $table->string('codigo',3)->unique();
             $table->string('carrera');
@@ -32,6 +32,6 @@ class CreateTableProfesorados extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('table_profesorados');
+        Schema::dropIfExists('licenciaturas');
     }
 }
