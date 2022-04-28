@@ -1,25 +1,25 @@
-import axios from "axios";
-import React, {useState} from "react";
-import { useNavigate } from "react-router-dom";
-const endpoint = 'http://127.0.0.1:8000/api/licenciaturas/create';
-const CreateLicenciaturas = () =>{
+import axios from 'axios'
+import React, {useState} from 'react'
+import { useNavigate } from 'react-router-dom'
 
+const endpoint = 'http://127.0.0.1:8000/api/ingenieria';
+const Createingenierias = () => {
     const [codigo, setCodigo] = useState('');
     const [carrera, setCarrera] = useState('');
     const [descripcion, setDescripcion] = useState('');
     const [duracion, setDuracion] = useState('');
-    const [asignaturas, setAsignaturas] = useState(0);
-    const [uv, setUV] = useState(0);
+    const [asignaturas, setAsignaturas] = useState('');
+    const [uv, setUV] = useState('');
     const navigate = useNavigate();
-    const store = async (e) =>
-    {
-        e.preventDefault()
-        await axios.post(endpoint, {codigo: codigo, carrera: carrera, descripcion: descripcion, duracion: duracion, asignaturas:asignaturas, uv:uv})
+
+    const store = async (e) => {
+        e.preventDefault();
+        await axios.post(endpoint,{codigo: codigo, carrera: carrera, descripcion: descripcion, duracion: duracion, asignaturas:asignaturas, uv:uv})
         navigate('/')
     }
-
-    return (
-        <div><h3>Agregar una nueva carrera</h3>
+  return (
+    <div>
+        <h3>Agregar una nueva carrera</h3>
         <form onSubmit={store}>
             <div className="mb-3">
             <label htmlFor="" className="form-label">Codigo</label>
@@ -77,7 +77,8 @@ const CreateLicenciaturas = () =>{
             </div>
            <button type='submit' className="btn btn-success">Store</button>        
         </form>
-        </div>
-    )
+    </div>
+  )
 }
-export default CreateLicenciaturas
+
+export default Createingenierias

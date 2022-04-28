@@ -5,7 +5,8 @@ namespace Database\Seeders;
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\DB;
 
-class licenciaturaSeeder extends Seeder
+
+class ingenieriaSeeder extends Seeder
 {
     /**
      * Run the database seeds.
@@ -14,7 +15,7 @@ class licenciaturaSeeder extends Seeder
      */
     public function run()
     {
-        DB::table('licenciaturas')->insert([
+        DB::table('ingenierias')->insert([
         	[
 	        	'codigo' => '102',
 	        	'carrera' => 'Teologia Pastoral',
