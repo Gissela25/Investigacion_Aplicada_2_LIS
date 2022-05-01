@@ -18,11 +18,20 @@ const Createingenierias = () => {
         navigate('/')
     }
   return (
+    
     <div>
-        <h3>Agregar una nueva carrera</h3>
+       <div class="d-flex justify-content-center">
+                <div class="col-md-4 my-5">
+    <div class="d-flex justify-content-center">
+              <div class="my-2">
+              <div className="mb-5">
+        <h5>Agregar una nueva carrera</h5>
+        </div>
+        </div>
+        </div>
         <form onSubmit={store}>
             <div className="mb-3">
-            <label htmlFor="" className="form-label">Codigo</label>
+            <label htmlFor="" className="form-label">Codigo de Carrera</label>
             <input
             value={codigo}
             onChange= {(e)=> setCodigo(e.target.value)}
@@ -31,7 +40,7 @@ const Createingenierias = () => {
             />
             </div>
             <div className="mb-3">
-            <label htmlFor="" className="form-label">Carrera</label>
+            <label htmlFor="" className="form-label">Nombre</label>
             <input
             value={carrera}
             onChange= {(e)=> setCarrera(e.target.value)}
@@ -49,7 +58,7 @@ const Createingenierias = () => {
             />
             </div>
             <div className="mb-3">
-            <label htmlFor="" className="form-label">Duración</label>
+            <label htmlFor="" className="form-label">Duración en ciclos</label>
             <input
             value={duracion}
             onChange= {(e)=> setDuracion(e.target.value)}
@@ -58,7 +67,7 @@ const Createingenierias = () => {
             />
             </div>
             <div className="mb-3">
-            <label htmlFor="" className="form-label">Asignaturas</label>
+            <label htmlFor="" className="form-label">Asignaturas Totales</label>
             <input
             value={asignaturas}
             onChange= {(e)=> setAsignaturas(e.target.value)}
@@ -75,9 +84,16 @@ const Createingenierias = () => {
             className="form-control"
             />
             </div>
-           <button type='submit' className="btn btn-success">Store</button>        
+            <div class="d-flex justify-content-center">
+              <div class="my-2">
+           <button type='submit' className="btn btn-success">Enviar</button>     
+           </div>
+           </div>   
         </form>
     </div>
+    </div>
+    </div>
+    
   )
 }
 
